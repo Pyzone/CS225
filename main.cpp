@@ -1,0 +1,25 @@
+#include <iostream>
+#include "rgbapixel.h"
+#include "png.h"
+
+using namespace std;
+int main()  
+{
+	PNG input("in.png"); //reads an image
+	int w_out = input.width(); // reads width
+	int h_out = input.height(); //reads height
+	PNG output(w_out, h_out); //creates a new image of same size
+	for (auto w_change = 0; w_change < w_out;w_change++)
+	{
+		for (auto h_change=0;h_change < h_out; h_change++)
+		{
+			RGBAPixel * out_ptr = output.operator()(w_change,h_change);
+ 			RGBAPixel * int_ptr = input.operator()(w_out-1-w_change, h_out-1-h_change);
+			out_ptr->red = int_ptr->red;
+			out_ptr->green = int_ptr->green;
+			out_ptr->blue = int_ptr->blue;
+		}
+	}
+
+	output.writeToFile("out.png");
+}

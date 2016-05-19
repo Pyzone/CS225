@@ -1,0 +1,55 @@
+Grading r3959 by ypan19 committed on Tue Jan 26 08:34:40 CST 2016
+Monad Autograder
+Testing mp1 at 2016-01-27 00:26:35
+
+"The cheapest, fastest, and most reliable components of a computer system are those that aren't there." ~ Gordon Bell
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+RGBAPixel_default_ctor [5 pts]  - passed
+RGBAPixel_three_ctor . [10 pts] - passed
+in_01_png  . . . . . . [5 pts]  - passed
+in_02_png  . . . . . . [5 pts]  - passed
+in_03_png  . . . . . . [5 pts]  - passed
+in_04_png  . . . . . . [5 pts]  - passed
+in_05_png  . . . . . . [5 pts]  - passed
+in_06_png  . . . . . . [5 pts]  - passed
+in_07_png  . . . . . . [5 pts]  - passed
+in_08_png  . . . . . . [5 pts]  - passed
+in_09_png  . . . . . . [5 pts]  - passed
+in_10_png  . . . . . . [5 pts]  - passed
+in_11_png  . . . . . . [5 pts]  - passed
+in_12_png  . . . . . . [5 pts]  - passed
+in_13_png  . . . . . . [5 pts]  - passed
+Makefile . . . . . . . [20 pts] - FAILED: ./testmakefile.cpp:42: make returned error
+
+
+Total score...
+================================================================
+TOTAL SCORE: 80
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+Makefile [20 points]
+Result: FAILED: ./testmakefile.cpp:42: make returned error
+Took 0ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+g++ -c -g -O0 -Wall -Werror -std=c++11  main.cpp
+cc1plus: error: unrecognized command line option "-std=c++11"
+make: *** [main.o] Error 1
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 80
+
