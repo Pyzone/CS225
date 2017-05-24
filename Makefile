@@ -22,3 +22,7 @@ rgbapixel.o : rgbapixel.cpp rgbapixel.h
 
 clean :
 	-rm -f *.o $(EXENAME)
+
+
+
+# what
